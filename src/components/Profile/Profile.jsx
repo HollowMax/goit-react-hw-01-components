@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { Box, Image, UserName, UserInfo, Stats, StatsItem } from './Profile.styled';
 
 export function Profile({ username, tag, location, avatar, stats }) {
