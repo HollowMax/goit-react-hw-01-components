@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HollowMax/goit-react-hw-01-components/static/css/main.7acaea2f.css",
+    "main.js": "/HollowMax/goit-react-hw-01-components/static/js/main.cb0a8cd9.js",
+    "index.html": "/HollowMax/goit-react-hw-01-components/index.html",
+    "main.7acaea2f.css.map": "/HollowMax/goit-react-hw-01-components/static/css/main.7acaea2f.css.map",
+    "main.cb0a8cd9.js.map": "/HollowMax/goit-react-hw-01-components/static/js/main.cb0a8cd9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.cb0a8cd9.js"
+  ]
+}
