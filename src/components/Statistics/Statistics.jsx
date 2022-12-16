@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { StatisticsList, StatisticsListItem, StatisticsSection } from './Statistics.styled';
+import { StatisticsList, StatisticsSection } from './Statistics.styled';
 import { SLItem } from './StatisticsListIte';
 
 export function Statistics({ title, stats }) {
