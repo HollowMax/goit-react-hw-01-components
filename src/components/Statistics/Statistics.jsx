@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
 import { StatisticsList, StatisticsListItem, StatisticsSection } from './Statistics.styled';
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
+import { SLItem } from './StatisticsListIte';
 
 export function Statistics({ title, stats }) {
   return (
@@ -14,14 +9,7 @@ export function Statistics({ title, stats }) {
 
       <StatisticsList className="stat-list">
         {stats.map(el => (
-          <StatisticsListItem
-            className="item"
-            style={{ backgroundColor: getRandomHexColor() }}
-            key={el.id}
-          >
-            <span className="label">{el.label}</span>
-            <span className="percentage">{el.percentage}%</span>
-          </StatisticsListItem>
+          <SLItem key={el.id} label={el.label} percentage={el.percentage} id={el.id}></SLItem>
         ))}
       </StatisticsList>
     </StatisticsSection>
@@ -31,4 +19,9 @@ export function Statistics({ title, stats }) {
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.array.isRequired,
+  el: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }),
 };
