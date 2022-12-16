@@ -5,7 +5,7 @@ const capitalize = function (el) {
   return `${el[0].toUpperCase()}${el.slice(1)}`;
 };
 
-export function TransactionHistory(transactions) {
+export function TransactionHistory({ items }) {
   return (
     <Tbl className="transaction-history">
       <thead>
@@ -17,7 +17,7 @@ export function TransactionHistory(transactions) {
       </thead>
 
       <tbody>
-        {transactions.items.map(el => (
+        {items.map(el => (
           <tr key={el.id}>
             <Tdata>{capitalize(el.type)}</Tdata>
             <Tdata>{el.amount}</Tdata>
@@ -30,5 +30,5 @@ export function TransactionHistory(transactions) {
 }
 
 TransactionHistory.propTypes = {
-  transactions: PropTypes.shape(PropTypes.array.isRequired),
+  items: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired)),
 };

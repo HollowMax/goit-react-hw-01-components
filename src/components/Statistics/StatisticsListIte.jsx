@@ -7,7 +7,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-export function SLItem({ id, label, percentage }) {
+export function SLItem({ label, percentage }) {
   return (
     <StatisticsListItem className="item" style={{ backgroundColor: getRandomHexColor() }}>
       <span className="label">{label}</span>
@@ -15,9 +15,3 @@ export function SLItem({ id, label, percentage }) {
     </StatisticsListItem>
   );
 }
-
-SLItem.propTypes = {
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
-};

@@ -9,7 +9,7 @@ export function Statistics({ title, stats }) {
 
       <StatisticsList className="stat-list">
         {stats.map(el => (
-          <SLItem key={el.id} label={el.label} percentage={el.percentage} id={el.id}></SLItem>
+          <SLItem key={el.id} label={el.label} percentage={el.percentage}></SLItem>
         ))}
       </StatisticsList>
     </StatisticsSection>
@@ -18,10 +18,11 @@ export function Statistics({ title, stats }) {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array.isRequired,
-  el: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }),
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
