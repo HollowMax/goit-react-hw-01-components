@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { FriendItem } from './FriendListItem.styled';
 
 export function FriendListItem({ avatar, name }) {
