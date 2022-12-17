@@ -1,4 +1,5 @@
 import { StatisticsListItem } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -14,3 +15,8 @@ export function SLItem({ label, percentage }) {
     </StatisticsListItem>
   );
 }
+
+SLItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+};
